@@ -1,8 +1,30 @@
-Development server command
-Vagrant up ---> command connect to virtual machine 
-Vagrant ssh ---> command connect to ssh 
+"""Development server command
+Vagrant up ---> command connect to virtual machine
+Vagrant ssh ---> command connect to ssh
 cd vagrant --> go inside vagrant
 touch test.txt ---> will sync the files to virtual machine and create the test.txt
 python <filename> --> command to run the python file
 python -m venv ~/env ---> create a python env for creating the Django file
-	~ --> it create a env to a root directory which is vagrant that is synced to virtual machine 
+	~ --> it create a env to a root directory which is vagrant that is synced to virtual machine
+source ~/env/bin/activate --> activate env
+deactivate --> deactivate env
+pip install -r requirements.txt --> install requirement file which contains Django and rest framework version
+rdjango-admin.py startproject profiles_project . --> start Django project , where " . " represent to start project under the folders we created
+python manage.py startapp profiles_api  --> new subfolder for Django app within our project
+python manage.py makemigrations profiles_api:
+This command creates migration files for the profiles_api app (or any other specified app).
+Django tracks changes in your models (like adding new fields, modifying existing ones, or creating new models) and turns them into migration files.
+Migrations are a way to propagate changes made to your models (like adding fields or changing data types) into the database schema.
+Example:
+
+If you add a new model or modify an existing one, running makemigrations will generate a migration file. The file describes the database changes required to align with the updated models.
+Purpose: To prepare and track changes in your models before they are applied to the actual database.
+
+2. python manage.py migrate:
+This command applies the migrations to the actual database.
+Once you've generated migration files with makemigrations, the migrate command will execute these migrations and update your database schema (create tables, modify columns, etc.).
+It ensures that your database is in sync with your current Django models.
+Example:
+
+After creating a migration that adds a new field to a model, running migrate will add that new column to the relevant table in the database.
+Purpose: To apply the changes tracked by migrations to the actual database, ensuring your database structure matches your models."""
