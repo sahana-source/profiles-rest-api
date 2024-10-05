@@ -27,4 +27,10 @@ It ensures that your database is in sync with your current Django models.
 Example:
 
 After creating a migration that adds a new field to a model, running migrate will add that new column to the relevant table in the database.
-Purpose: To apply the changes tracked by migrations to the actual database, ensuring your database structure matches your models."""
+Purpose: To apply the changes tracked by migrations to the actual database, ensuring your database structure matches your models.
+
+python manage.py createsuperuser --> create django admin 
+enter email, name and password 
+python manage.py runserver 0.0.0.0:8000 --> Test or run the server
+
+"""
