@@ -1,0 +1,8 @@
+Development server command
+Vagrant up ---> command connect to virtual machine 
+Vagrant ssh ---> command connect to ssh 
+cd vagrant --> go inside vagrant
+touch test.txt ---> will sync the files to virtual machine and create the test.txt
+python <filename> --> command to run the python file
+python -m venv ~/env ---> create a python env for creating the Django file
+	~ --> it create a env to a root directory which is vagrant that is synced to virtual machine 
